@@ -1,0 +1,31 @@
+Trabalho pratico 0 da disciplina de Sistemas Distribuidos (CI1088)
+
+Tarefa 2: Cada processo correto executa testes até achar outro processo correto
+
+Autor: Allan Cedric G. B. Alves da Silva - GRR20190351
+
+Info.: N = 4
+
+o processo 0 testou o processo 1 CORRETO no tempo  30.0
+o processo 1 testou o processo 2 CORRETO no tempo  30.0
+o processo 2 testou o processo 3 CORRETO no tempo  30.0
+o processo 3 testou o processo 0 CORRETO no tempo  30.0
+o processo 1 falhou no tempo  31.0
+o processo 0 testou o processo 1 FALHO no tempo  60.0
+o processo 0 testou o processo 2 CORRETO no tempo  60.0
+o processo 2 testou o processo 3 CORRETO no tempo  60.0
+o processo 3 testou o processo 0 CORRETO no tempo  60.0
+o processo 1 recuperou no tempo  61.0
+o processo 1 testou o processo 2 CORRETO no tempo  62.0
+o processo 1 falhou no tempo  63.0
+o processo 2 falhou no tempo  63.0
+o processo 3 falhou no tempo  63.0
+o processo 0 testou o processo 1 FALHO no tempo  90.0
+o processo 0 testou o processo 2 FALHO no tempo  90.0
+o processo 0 testou o processo 3 FALHO no tempo  90.0
+o processo 0 testou o processo 1 FALHO no tempo 120.0
+o processo 0 testou o processo 2 FALHO no tempo 120.0
+o processo 0 testou o processo 3 FALHO no tempo 120.0
+o processo 0 testou o processo 1 FALHO no tempo 150.0
+o processo 0 testou o processo 2 FALHO no tempo 150.0
+o processo 0 testou o processo 3 FALHO no tempo 150.0
