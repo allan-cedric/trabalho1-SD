@@ -124,6 +124,10 @@ int main(int argc, char *argv[])
         break;
     } /* end switch */
   } /* end while */
+  
+  free(processo);
+
+  return 0;
 } /* end tempo.c */
 
 int processo_falho(TipoProcesso p)

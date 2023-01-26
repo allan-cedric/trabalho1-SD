@@ -1,7 +1,7 @@
 CFLAGS = -Bstatic
 LDLIBS = -lm
 
-all: tempo tarefa1 tarefa2 tarefa3
+all: tempo tarefa1 tarefa2 tarefa3 tarefa4
 
 tempo: tempo.o smpl.o rand.o
 tempo.o: tempo.c smpl.h
@@ -14,6 +14,9 @@ tarefa2.o: tarefa2.c smpl.h
 
 tarefa3: tarefa3.o smpl.o rand.o
 tarefa3.o: tarefa3.c smpl.h
+
+tarefa4: tarefa4.o smpl.o rand.o
+tarefa4.o: tarefa4.c smpl.h
 
 rand.o: rand.c
 smpl.o: smpl.c smpl.h
