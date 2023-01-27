@@ -101,5 +101,40 @@
     <p>
         Implementação do detector de falhas <i>pull-based</i>: <b>VCube</b>.
     </p>
+    <p>
+        O cerne do algoritmo do VCube é a função <b>C(i, s)</b>, a qual retorna uma lista de processos do cluster <b>s</b> em relação ao <b>processo i</b>. Basicamente é ela que define a complexidade do número de testes entre os processos.
+    </p>
+    <p>
+        A minha implementação do VCube tirou proveito de dois arquivos disponibilizados pelo professor: <b>cisj.h</b> e <b>cisj.c</b>. Nesses arquivos estão presentes o código-fonte para calcular <b>C(i, s)</b>.
+    </p>
+    <p>
+        O pseudocódigo que representa algoritmo do VCube implementado pode ser visto a seguir:
+    </p>
+    <pre>
+<b>Algoritmo VCube executado no nodo i:</b>
+    repita
+        para s ← 1 até log2 N faça
+            para todo j ∈ ci,s | i é o primeiro nodo sem falha ∈ cj,s faça
+                teste(j)
+                se j está sem-falha então
+                    se ti [j] mod 2 = 1 então 
+                        ti [j] = ti [j] + 1
+                    obtém informações de diagnóstico
+                senão
+                    se ti [j] mod 2 = 0 então 
+                        ti [j] = ti [j] + 1
+        durma até o próximo intervalo de testes
+    para sempre
+    </pre>
+    Código-fonte:
+    <ul>
+        <li><a href="./trabalho1/cisj.h.txt" target="_blank">cisj.h</a> e <a href="./trabalho1/cisj.c.txt" target="_blank">cisj.c</a> (eles levemente adaptados para minha implementação)</li>
+        <li><a href="./trabalho1/vcube.c.txt" target="_blank">vcube.c</a></li>
+    </ul>
+    Logs:
+    <ul>
+        <li>./vcube 4 &gt; <a href="./trabalho1/log_vcube4.txt" target="_blank">log_vcube4.txt</a></li>
+        <li>./vcube 8 &gt; <a href="./trabalho1/log_vcube8.txt" target="_blank">log_vcube8.txt</a></li>
+    </ul>
 </body>
 </html>

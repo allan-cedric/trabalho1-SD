@@ -1,0 +1,321 @@
+Trabalho pratico 0 da disciplina de Sistemas Distribuidos (CI1088)
+
+Implementacao do detector de falhas vCube no ambiente de simulação SMPL
+
+Autor: Allan Cedric G. B. Alves da Silva - GRR20190351
+
+Info.: N = 8
+
+
+**************** RODADA 1 ****************
+
+o processo 0 testou o processo 1 CORRETO no tempo  30.0
+o processo 0 testou o processo 2 CORRETO no tempo  30.0
+o processo 0 testou o processo 4 CORRETO no tempo  30.0
+State_0: {0, 0, 0, -1, 0, -1, -1, -1}
+
+o processo 1 testou o processo 0 CORRETO no tempo  30.0
+o processo 1 testou o processo 3 CORRETO no tempo  30.0
+o processo 1 testou o processo 5 CORRETO no tempo  30.0
+State_1: {0, 0, 0, 0, 0, 0, -1, -1}
+
+o processo 2 testou o processo 3 CORRETO no tempo  30.0
+o processo 2 testou o processo 0 CORRETO no tempo  30.0
+o processo 2 testou o processo 6 CORRETO no tempo  30.0
+State_2: {0, 0, 0, 0, 0, -1, 0, -1}
+
+o processo 3 testou o processo 2 CORRETO no tempo  30.0
+o processo 3 testou o processo 1 CORRETO no tempo  30.0
+o processo 3 testou o processo 7 CORRETO no tempo  30.0
+State_3: {0, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 4 testou o processo 5 CORRETO no tempo  30.0
+o processo 4 testou o processo 6 CORRETO no tempo  30.0
+o processo 4 testou o processo 0 CORRETO no tempo  30.0
+State_4: {0, 0, 0, -1, 0, 0, 0, -1}
+
+o processo 5 testou o processo 4 CORRETO no tempo  30.0
+o processo 5 testou o processo 7 CORRETO no tempo  30.0
+o processo 5 testou o processo 1 CORRETO no tempo  30.0
+State_5: {0, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 6 testou o processo 7 CORRETO no tempo  30.0
+o processo 6 testou o processo 4 CORRETO no tempo  30.0
+o processo 6 testou o processo 2 CORRETO no tempo  30.0
+State_6: {0, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 7 testou o processo 6 CORRETO no tempo  30.0
+o processo 7 testou o processo 5 CORRETO no tempo  30.0
+o processo 7 testou o processo 3 CORRETO no tempo  30.0
+State_7: {0, 0, 0, 0, 0, 0, 0, 0}
+
+**************** FIM DA RODADA 1 ****************
+
+
+EVENTO: o processo 0 falhou no tempo  58.0
+
+
+**************** RODADA 2 ****************
+
+o processo 1 testou o processo 0 FALHO no tempo  60.0
+o processo 1 testou o processo 3 CORRETO no tempo  60.0
+o processo 1 testou o processo 2 CORRETO no tempo  60.0
+o processo 1 testou o processo 5 CORRETO no tempo  60.0
+o processo 1 testou o processo 4 CORRETO no tempo  60.0
+State_1: {1, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 2 testou o processo 3 CORRETO no tempo  60.0
+o processo 2 testou o processo 0 FALHO no tempo  60.0
+o processo 2 testou o processo 6 CORRETO no tempo  60.0
+State_2: {1, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 3 testou o processo 2 CORRETO no tempo  60.0
+o processo 3 testou o processo 1 CORRETO no tempo  60.0
+o processo 3 testou o processo 7 CORRETO no tempo  60.0
+State_3: {1, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 4 testou o processo 5 CORRETO no tempo  60.0
+o processo 4 testou o processo 6 CORRETO no tempo  60.0
+o processo 4 testou o processo 0 FALHO no tempo  60.0
+State_4: {1, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 5 testou o processo 4 CORRETO no tempo  60.0
+o processo 5 testou o processo 7 CORRETO no tempo  60.0
+o processo 5 testou o processo 1 CORRETO no tempo  60.0
+State_5: {1, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 6 testou o processo 7 CORRETO no tempo  60.0
+o processo 6 testou o processo 4 CORRETO no tempo  60.0
+o processo 6 testou o processo 2 CORRETO no tempo  60.0
+State_6: {1, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 7 testou o processo 6 CORRETO no tempo  60.0
+o processo 7 testou o processo 5 CORRETO no tempo  60.0
+o processo 7 testou o processo 3 CORRETO no tempo  60.0
+State_7: {1, 0, 0, 0, 0, 0, 0, 0}
+
+**************** FIM DA RODADA 2 ****************
+==================================================
+Resultado do diagnostico (evento no processo 0):
+Num. de testes: 23
+Latencia: 1
+==================================================
+
+
+EVENTO: o processo 1 falhou no tempo  88.0
+
+
+**************** RODADA 3 ****************
+
+o processo 2 testou o processo 3 CORRETO no tempo  90.0
+o processo 2 testou o processo 0 FALHO no tempo  90.0
+o processo 2 testou o processo 6 CORRETO no tempo  90.0
+o processo 2 testou o processo 4 CORRETO no tempo  90.0
+State_2: {1, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 3 testou o processo 2 CORRETO no tempo  90.0
+o processo 3 testou o processo 1 FALHO no tempo  90.0
+o processo 3 testou o processo 7 CORRETO no tempo  90.0
+o processo 3 testou o processo 5 CORRETO no tempo  90.0
+State_3: {1, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 4 testou o processo 5 CORRETO no tempo  90.0
+o processo 4 testou o processo 6 CORRETO no tempo  90.0
+o processo 4 testou o processo 0 FALHO no tempo  90.0
+State_4: {1, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 5 testou o processo 4 CORRETO no tempo  90.0
+o processo 5 testou o processo 7 CORRETO no tempo  90.0
+o processo 5 testou o processo 1 FALHO no tempo  90.0
+State_5: {1, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 6 testou o processo 7 CORRETO no tempo  90.0
+o processo 6 testou o processo 4 CORRETO no tempo  90.0
+o processo 6 testou o processo 2 CORRETO no tempo  90.0
+State_6: {1, 0, 0, 0, 0, 0, 0, 0}
+
+o processo 7 testou o processo 6 CORRETO no tempo  90.0
+o processo 7 testou o processo 5 CORRETO no tempo  90.0
+o processo 7 testou o processo 3 CORRETO no tempo  90.0
+State_7: {1, 1, 0, 0, 0, 0, 0, 0}
+
+**************** FIM DA RODADA 3 ****************
+
+**************** RODADA 4 ****************
+
+o processo 2 testou o processo 3 CORRETO no tempo 120.0
+o processo 2 testou o processo 0 FALHO no tempo 120.0
+o processo 2 testou o processo 6 CORRETO no tempo 120.0
+o processo 2 testou o processo 4 CORRETO no tempo 120.0
+State_2: {1, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 3 testou o processo 2 CORRETO no tempo 120.0
+o processo 3 testou o processo 1 FALHO no tempo 120.0
+o processo 3 testou o processo 7 CORRETO no tempo 120.0
+o processo 3 testou o processo 5 CORRETO no tempo 120.0
+State_3: {1, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 4 testou o processo 5 CORRETO no tempo 120.0
+o processo 4 testou o processo 6 CORRETO no tempo 120.0
+o processo 4 testou o processo 0 FALHO no tempo 120.0
+State_4: {1, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 5 testou o processo 4 CORRETO no tempo 120.0
+o processo 5 testou o processo 7 CORRETO no tempo 120.0
+o processo 5 testou o processo 1 FALHO no tempo 120.0
+State_5: {1, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 6 testou o processo 7 CORRETO no tempo 120.0
+o processo 6 testou o processo 4 CORRETO no tempo 120.0
+o processo 6 testou o processo 2 CORRETO no tempo 120.0
+State_6: {1, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 7 testou o processo 6 CORRETO no tempo 120.0
+o processo 7 testou o processo 5 CORRETO no tempo 120.0
+o processo 7 testou o processo 3 CORRETO no tempo 120.0
+State_7: {1, 1, 0, 0, 0, 0, 0, 0}
+
+**************** FIM DA RODADA 4 ****************
+==================================================
+Resultado do diagnostico (evento no processo 1):
+Num. de testes: 40
+Latencia: 2
+==================================================
+
+
+EVENTO: o processo 0 recuperou no tempo 138.0
+
+
+**************** RODADA 5 ****************
+
+o processo 2 testou o processo 3 CORRETO no tempo 150.0
+o processo 2 testou o processo 0 CORRETO no tempo 150.0
+o processo 2 testou o processo 6 CORRETO no tempo 150.0
+State_2: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 3 testou o processo 2 CORRETO no tempo 150.0
+o processo 3 testou o processo 1 FALHO no tempo 150.0
+o processo 3 testou o processo 7 CORRETO no tempo 150.0
+State_3: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 4 testou o processo 5 CORRETO no tempo 150.0
+o processo 4 testou o processo 6 CORRETO no tempo 150.0
+o processo 4 testou o processo 0 CORRETO no tempo 150.0
+State_4: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 5 testou o processo 4 CORRETO no tempo 150.0
+o processo 5 testou o processo 7 CORRETO no tempo 150.0
+o processo 5 testou o processo 1 FALHO no tempo 150.0
+State_5: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 6 testou o processo 7 CORRETO no tempo 150.0
+o processo 6 testou o processo 4 CORRETO no tempo 150.0
+o processo 6 testou o processo 2 CORRETO no tempo 150.0
+State_6: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 7 testou o processo 6 CORRETO no tempo 150.0
+o processo 7 testou o processo 5 CORRETO no tempo 150.0
+o processo 7 testou o processo 3 CORRETO no tempo 150.0
+State_7: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 0 testou o processo 1 FALHO no tempo 168.0
+o processo 0 testou o processo 2 CORRETO no tempo 168.0
+o processo 0 testou o processo 3 CORRETO no tempo 168.0
+o processo 0 testou o processo 4 CORRETO no tempo 168.0
+o processo 0 testou o processo 5 CORRETO no tempo 168.0
+State_0: {2, 1, 0, 0, 0, 0, 0, 0}
+
+**************** FIM DA RODADA 5 ****************
+==================================================
+Resultado do diagnostico (evento no processo 0):
+Num. de testes: 23
+Latencia: 1
+==================================================
+
+
+
+**************** RODADA 6 ****************
+
+o processo 2 testou o processo 3 CORRETO no tempo 180.0
+o processo 2 testou o processo 0 CORRETO no tempo 180.0
+o processo 2 testou o processo 6 CORRETO no tempo 180.0
+State_2: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 3 testou o processo 2 CORRETO no tempo 180.0
+o processo 3 testou o processo 1 FALHO no tempo 180.0
+o processo 3 testou o processo 7 CORRETO no tempo 180.0
+State_3: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 4 testou o processo 5 CORRETO no tempo 180.0
+o processo 4 testou o processo 6 CORRETO no tempo 180.0
+o processo 4 testou o processo 0 CORRETO no tempo 180.0
+State_4: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 5 testou o processo 4 CORRETO no tempo 180.0
+o processo 5 testou o processo 7 CORRETO no tempo 180.0
+o processo 5 testou o processo 1 FALHO no tempo 180.0
+State_5: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 6 testou o processo 7 CORRETO no tempo 180.0
+o processo 6 testou o processo 4 CORRETO no tempo 180.0
+o processo 6 testou o processo 2 CORRETO no tempo 180.0
+State_6: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 7 testou o processo 6 CORRETO no tempo 180.0
+o processo 7 testou o processo 5 CORRETO no tempo 180.0
+o processo 7 testou o processo 3 CORRETO no tempo 180.0
+State_7: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 0 testou o processo 1 FALHO no tempo 198.0
+o processo 0 testou o processo 2 CORRETO no tempo 198.0
+o processo 0 testou o processo 3 CORRETO no tempo 198.0
+o processo 0 testou o processo 4 CORRETO no tempo 198.0
+o processo 0 testou o processo 5 CORRETO no tempo 198.0
+State_0: {2, 1, 0, 0, 0, 0, 0, 0}
+
+**************** FIM DA RODADA 6 ****************
+
+
+
+**************** RODADA 7 ****************
+
+o processo 2 testou o processo 3 CORRETO no tempo 210.0
+o processo 2 testou o processo 0 CORRETO no tempo 210.0
+o processo 2 testou o processo 6 CORRETO no tempo 210.0
+State_2: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 3 testou o processo 2 CORRETO no tempo 210.0
+o processo 3 testou o processo 1 FALHO no tempo 210.0
+o processo 3 testou o processo 7 CORRETO no tempo 210.0
+State_3: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 4 testou o processo 5 CORRETO no tempo 210.0
+o processo 4 testou o processo 6 CORRETO no tempo 210.0
+o processo 4 testou o processo 0 CORRETO no tempo 210.0
+State_4: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 5 testou o processo 4 CORRETO no tempo 210.0
+o processo 5 testou o processo 7 CORRETO no tempo 210.0
+o processo 5 testou o processo 1 FALHO no tempo 210.0
+State_5: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 6 testou o processo 7 CORRETO no tempo 210.0
+o processo 6 testou o processo 4 CORRETO no tempo 210.0
+o processo 6 testou o processo 2 CORRETO no tempo 210.0
+State_6: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 7 testou o processo 6 CORRETO no tempo 210.0
+o processo 7 testou o processo 5 CORRETO no tempo 210.0
+o processo 7 testou o processo 3 CORRETO no tempo 210.0
+State_7: {2, 1, 0, 0, 0, 0, 0, 0}
+
+o processo 0 testou o processo 1 FALHO no tempo 228.0
+o processo 0 testou o processo 2 CORRETO no tempo 228.0
+o processo 0 testou o processo 3 CORRETO no tempo 228.0
+o processo 0 testou o processo 4 CORRETO no tempo 228.0
+o processo 0 testou o processo 5 CORRETO no tempo 228.0
+State_0: {2, 1, 0, 0, 0, 0, 0, 0}
+
+**************** FIM DA RODADA 7 ****************
+
+
