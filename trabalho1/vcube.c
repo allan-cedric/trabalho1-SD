@@ -45,8 +45,11 @@ int main(int argc, char *argv[])
 {
   static int N, /* number of nodes is parameter */
       token,    /* node identifier, natural number */
+      nova_rodada,
       ini_rodada,
       cont_rodada,
+      proc_mudou,
+      num_testes,
       event,
       r,
       i, j;
@@ -103,16 +106,17 @@ int main(int argc, char *argv[])
   schedule(fault, 58.0, 0);
   schedule(fault, 88.0, 1);
 
-  schedule(recovery, 118.0, 0);
+  // schedule(recovery, 118.0, 0);
 
   // for (i = 1; i < N; i++)
   //   schedule(fault, 63.0, i);
 
   /*----- agora vem o loop principal do simulador -----*/
 
-  ini_rodada = 1;
+  nova_rodada = 1;
+  ini_rodada = -1;
   cont_rodada = 1;
-  while (time() < 150.0)
+  while (time() <= 150.0)
   {
     cause(&event, &token);
     switch (event)
@@ -120,10 +124,10 @@ int main(int argc, char *argv[])
       case test:
 
         // inicio de uma rodada
-        if (ini_rodada)
+        if (nova_rodada)
         {
           printf("\n**************** RODADA %i ****************\n\n", cont_rodada);
-          ini_rodada = 0;
+          nova_rodada = 0;
         }
 
         if (processo_falho(processo[token])) // processo falho n�o testa!
@@ -184,6 +188,8 @@ int main(int argc, char *argv[])
                   }
                 }
               }
+              if(ini_rodada > 0)
+                num_testes++;
             }
             free(lista_cjs->nodes);
             free(lista_cjs);
@@ -204,7 +210,36 @@ int main(int argc, char *argv[])
         // fim de rodada
         if (rodada_completa(processo, N))
         {
-          printf("**************** FIM DA RODADA %i ****************\n\n\n", cont_rodada);
+          if(ini_rodada > 0)
+          {
+            printf("**************** FIM DA RODADA %i ****************\n", cont_rodada);
+            int diag_completo = 1;
+            int estado_novo = processo_falho(processo[proc_mudou]);
+            for(i = 0; i < N; i++)
+            {
+              if(i != proc_mudou && !processo_falho(processo[i]))
+              {
+                if(processo[i].State[proc_mudou] != estado_novo)
+                {
+                  diag_completo = 0;
+                  break;
+                }
+              }
+            }
+
+            if(diag_completo)
+            {
+              printf("==================================================\n");
+              printf("Resultado do diagnostico (evento no processo %i):\n", proc_mudou);
+              printf("Num. de testes: %i\n", num_testes);
+              printf("Latencia: %i\n", cont_rodada - ini_rodada);
+              printf("==================================================\n\n\n");
+              ini_rodada = -1;
+            }
+          }
+          else
+            printf("**************** FIM DA RODADA %i ****************\n\n\n", cont_rodada);
+
           for (i = 0; i < N; i++)
           {
             if (!processo_falho(processo[i]))
@@ -214,19 +249,25 @@ int main(int argc, char *argv[])
             }
           }
           cont_rodada++;
-          ini_rodada = 1;
+          nova_rodada = 1;
         }
 
         schedule(test, 30.0, token);
         break;
       case fault:
         r = request(processo[token].id, token, 0);
-        printf("o processo %d falhou no tempo %5.1f\n\n", token, time());
+        printf("EVENTO: o processo %d falhou no tempo %5.1f\n\n", token, time());
+        ini_rodada = cont_rodada;
+        proc_mudou = token;
+        num_testes = 0;
         break;
       case recovery:
         release(processo[token].id, token);
         schedule(test, 30.0, token);
-        printf("o processo %d recuperou no tempo %5.1f\n\n", token, time());
+        printf("EVENTO: o processo %d recuperou no tempo %5.1f\n\n", token, time());
+        ini_rodada = cont_rodada;
+        proc_mudou = token;
+        num_testes = 0;
         break;
     } /* end switch */
   } /* end while */
