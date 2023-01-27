@@ -214,12 +214,12 @@ int main(int argc, char *argv[])
           {
             printf("**************** FIM DA RODADA %i ****************\n", cont_rodada);
             int diag_completo = 1;
-            int estado_novo = processo_falho(processo[proc_mudou]);
+            int estado_novo = processo_falho(processo[proc_mudou]) % 2;
             for(i = 0; i < N; i++)
             {
               if(i != proc_mudou && !processo_falho(processo[i]))
               {
-                if(processo[i].State[proc_mudou] != estado_novo)
+                if(processo[i].State[proc_mudou] % 2 != estado_novo)
                 {
                   diag_completo = 0;
                   break;
