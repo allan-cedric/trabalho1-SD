@@ -30,12 +30,10 @@
         <p>
             Envolvia a execução de um código-exemplo do professor para entender a SMPL.
         </p>
-
         Código-fonte:
         <ul>
             <li><a href="./trabalho0/tempo.c.txt" target="_blank">tempo.c</a></li>
         </ul>
-
         Logs:
         <ul>
             <li>./tempo 4 &gt; <a href="./trabalho0/log_tempo.txt" target="_blank">log_tempo.txt</a></li>
@@ -46,15 +44,28 @@
             Para cada processo testar o seguinte do anel, foi utilizado a seguinte estratégia:
             o <b>processo i</b> testa o <b>processo (i + 1) mod N</b>. Sendo <b>N</b> o número de processos do sistema.
         </p>
-
         Código-fonte:
         <ul>
             <li><a href="./trabalho0/tarefa1.c.txt" target="_blank">tarefa1.c</a></li>
         </ul>
-
         Logs:
         <ul>
-            <li>./tarefa 4 &gt; <a href="./trabalho0/log_tarefa1.txt" target="_blank">log_tarefa1.txt</a></li>
+            <li>./tarefa1 4 &gt; <a href="./trabalho0/log_tarefa1.txt" target="_blank">log_tarefa1.txt</a></li>
+        </ul>
+
+        <h3>Tarefa 2:</h3>
+        <p>
+            A estratégia principal aqui é: para cada intervalo de testes de um <b>processo i</b>, enquanto tiver um <b>processo j</b> tal que seja diferente de <b>i</b> e <b>falho</b>, então faça um teste para o próximo processo.
+            
+            Quando o processo a ser "testado" é igual <b>i</b> significa que todos os <b>N-1</b> processos restantes são <b>falhos</b>.
+        </p>
+        Código-fonte:
+        <ul>
+            <li><a href="./trabalho0/tarefa2.c.txt" target="_blank">tarefa2.c</a></li>
+        </ul>
+        Logs:
+        <ul>
+            <li>./tarefa2 4 &gt; <a href="./trabalho0/log_tarefa2.txt" target="_blank">log_tarefa2.txt</a></li>
         </ul>
     </p>
 
