@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 {
   static int N, /* number of nodes is parameter */
       token,    /* node identifier, natural number */
-      prox_tk,
+      prox_tk,  /* next token to test */
       event,
       r,
       i;
@@ -112,4 +112,8 @@ int main(int argc, char *argv[])
         break;
     } /* end switch */
   } /* end while */
+
+  free(processo);
+
+  return 0;
 } /* end tempo.c */

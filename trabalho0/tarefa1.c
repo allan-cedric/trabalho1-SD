@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 {
   static int N, /* number of nodes is parameter */
       token,    /* node identifier, natural number */
-      prox_tk,
+      prox_tk,  /* next token to test */
       event,
       r,
       i;

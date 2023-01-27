@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho prático 1 - Sistemas Distribuídos</title>
+</head>
+<body>
+    <h1>Trabalho Prático 1 da disciplina de Sistemas Distribuídos (CI1088)</h1>
+    <h2>Autor: Allan Cedric G. B. Alves da Silva - GRR20190351</h2>
+
+    <p>
+        Este presente trabalho busca implementar e exemplificar na prática em um ambiente simulado alguns algoritmos distribuídos de detecção de falhas. A saber este trabalho está dividido em duas partes: <b>Trabalho 0</b> e <b>Trabalho 1</b>.
+    </p>
+
+    <p>
+        Cada parte disponibiliza uma descrição geral da implementação, código-fonte e logs de execução para alguns casos de teste.
+    </p>
+
+    <hr>
+
+    <h2>Trabalho 0</h2>
+    <p>
+        Contempla 5 tarefas de familiarização com a biblioteca <b>SMPL</b>.
+        Focando-se na implementação construtiva do detector de falhas <i>pull-based</i>:
+        <b>VRing</b>.
+
+        <h3>Tarefa 0:</h3>
+        <p>
+            Envolvia a execução de um código-exemplo do professor para entender a SMPL.
+        </p>
+
+        Código-fonte:
+        <ul>
+            <li><a href="./trabalho0/tempo.c.txt" target="_blank">tempo.c</a></li>
+        </ul>
+
+        Logs:
+        <ul>
+            <li>./tempo 4 &gt; <a href="./trabalho0/log_tempo.txt" target="_blank">log_tempo.txt</a></li>
+        </ul>
+
+        <h3>Tarefa 1:</h3>
+        <p>
+            Para cada processo testar o seguinte do anel, foi utilizado a seguinte estratégia:
+            o <b>processo i</b> testa o <b>processo (i + 1) mod N</b>. Sendo <b>N</b> o número de processos do sistema.
+        </p>
+
+        Código-fonte:
+        <ul>
+            <li><a href="./trabalho0/tarefa1.c.txt" target="_blank">tarefa1.c</a></li>
+        </ul>
+
+        Logs:
+        <ul>
+            <li>./tarefa 4 &gt; <a href="./trabalho0/log_tarefa1.txt" target="_blank">log_tarefa1.txt</a></li>
+        </ul>
+    </p>
+
+    <hr>
+
+    <h2>Trabalho 1</h2>
+    <p>
+        Implementação do detector de falhas <i>pull-based</i>: <b>VCube</b>.
+    </p>
+</body>
+</html>
