@@ -34,7 +34,7 @@ typedef struct
 } TipoProcesso;
 
 // Retorna 1 se esta falho, senao 0
-int processo_falho(TipoProcesso p);
+int testa(TipoProcesso p);
 
 TipoProcesso *processo;
 
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 {
   static int N, /* number of nodes is parameter */
       token,    /* node identifier, natural number */
-      prox_tk,
+      prox_tk,  /* next token to test */
       event,
       r,
       i;
@@ -112,13 +112,13 @@ int main(int argc, char *argv[])
     switch (event)
     {
       case test:
-        if (processo_falho(processo[token])) // processo falho n�o testa!
+        if (testa(processo[token])) // processo falho n�o testa!
           break;
 
         prox_tk = (token + 1) % N;
 
         // enquanto existe um processo diferente e que esta falho
-        while (prox_tk != token && processo_falho(processo[prox_tk]))
+        while (prox_tk != token && testa(processo[prox_tk]))
         {
           processo[token].State[prox_tk] = falho;
           printf("o processo %i testou o processo %i FALHO no tempo %5.1f\n", token, prox_tk, time());
@@ -150,7 +150,7 @@ int main(int argc, char *argv[])
         printf("o processo %d recuperou no tempo %5.1f\n\n", token, time());
         break;
     } /* end switch */
-  }   /* end while */
+  } /* end while */
 
   for(i = 0; i < N; i++)
     free(processo[i].State);
@@ -159,7 +159,7 @@ int main(int argc, char *argv[])
   return 0;
 } /* end tempo.c */
 
-int processo_falho(TipoProcesso p)
+int testa(TipoProcesso p)
 {
   return status(p.id) != 0;
 }
