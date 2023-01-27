@@ -1,0 +1,87 @@
+Trabalho pratico 0 da disciplina de Sistemas Distribuidos (CI1088)
+
+Tarefa 4: Quando um processo correto testa outro processo correto obtém as informações do estado
+dos demais processos do sistema, processos do sistema exceto aqueles que testou nesta rodada,
+além do próprio testador.
+
+Autor: Allan Cedric G. B. Alves da Silva - GRR20190351
+
+Info.: N = 4
+
+
+**************** RODADA 1 ****************
+
+o processo 0 testou o processo 1 CORRETO no tempo  30.0
+State_0: {0, 0, -1, -1}
+
+o processo 1 testou o processo 2 CORRETO no tempo  30.0
+State_1: {-1, 0, 0, -1}
+
+o processo 2 testou o processo 3 CORRETO no tempo  30.0
+State_2: {-1, -1, 0, 0}
+
+o processo 3 testou o processo 0 CORRETO no tempo  30.0
+State_3: {0, 0, -1, 0}
+
+**************** FIM DA RODADA 1 ****************
+
+
+o processo 1 falhou no tempo  31.0
+
+
+**************** RODADA 2 ****************
+
+o processo 0 testou o processo 1 FALHO no tempo  60.0
+o processo 0 testou o processo 2 CORRETO no tempo  60.0
+State_0: {0, 1, 0, 0}
+
+o processo 2 testou o processo 3 CORRETO no tempo  60.0
+State_2: {0, 0, 0, 0}
+
+o processo 3 testou o processo 0 CORRETO no tempo  60.0
+State_3: {0, 1, 0, 0}
+
+**************** FIM DA RODADA 2 ****************
+
+
+o processo 1 recuperou no tempo  61.0
+
+o processo 1 falhou no tempo  63.0
+
+o processo 2 falhou no tempo  63.0
+
+o processo 3 falhou no tempo  63.0
+
+
+**************** RODADA 3 ****************
+
+o processo 0 testou o processo 1 FALHO no tempo  90.0
+o processo 0 testou o processo 2 FALHO no tempo  90.0
+o processo 0 testou o processo 3 FALHO no tempo  90.0
+State_0: {0, 1, 1, 1}
+
+**************** FIM DA RODADA 3 ****************
+
+
+
+**************** RODADA 4 ****************
+
+o processo 0 testou o processo 1 FALHO no tempo 120.0
+o processo 0 testou o processo 2 FALHO no tempo 120.0
+o processo 0 testou o processo 3 FALHO no tempo 120.0
+State_0: {0, 1, 1, 1}
+
+**************** FIM DA RODADA 4 ****************
+
+
+
+**************** RODADA 5 ****************
+
+o processo 0 testou o processo 1 FALHO no tempo 150.0
+o processo 0 testou o processo 2 FALHO no tempo 150.0
+o processo 0 testou o processo 3 FALHO no tempo 150.0
+State_0: {0, 1, 1, 1}
+
+**************** FIM DA RODADA 5 ****************
+
+
